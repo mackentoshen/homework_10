@@ -99,7 +99,6 @@ button:hover {
 .welcome-section {
   background: url("../../images/welcome-background.png") center center no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 
 /* line 1, ../scss/layouts/_footer.scss */
@@ -158,11 +157,11 @@ button:hover {
 }
 
 /* line 1, ../scss/components/_icons.scss */
-.footer-icons {
+.footer-icons, .card-icons {
   text-align: center;
 }
 /* line 4, ../scss/components/_icons.scss */
-.footer-icons .icon-border {
+.footer-icons .icon-border, .card-icons .icon-border {
   text-align: center;
   display: inline-block;
   text-decoration: none;
@@ -172,18 +171,35 @@ button:hover {
   margin-right: .5rem;
 }
 /* line 13, ../scss/components/_icons.scss */
-.footer-icons .icon-border:last-child {
+.footer-icons .icon-border:last-child, .card-icons .icon-border:last-child {
   margin-right: 0;
 }
 /* line 17, ../scss/components/_icons.scss */
-.footer-icons .icon-border:hover {
+.footer-icons .icon-border:hover, .card-icons .icon-border:hover {
   border: #e84545;
   background-color: #e84545;
 }
 /* line 22, ../scss/components/_icons.scss */
-.footer-icons .icon-border .fa {
+.footer-icons .icon-border .fa, .card-icons .icon-border .fa {
   line-height: 36px;
   color: #fff;
+}
+
+/* line 29, ../scss/components/_icons.scss */
+.card-icons {
+  text-align: left;
+}
+/* line 33, ../scss/components/_icons.scss */
+.card-icons .icon-border {
+  border: 2px solid #c6cacc;
+}
+/* line 36, ../scss/components/_icons.scss */
+.card-icons .icon-border:hover {
+  color: #fff;
+}
+/* line 40, ../scss/components/_icons.scss */
+.card-icons .icon-border .fa {
+  color: #c6cacc;
 }
 
 /* line 1, ../scss/components/_jumbotron.scss */
@@ -242,4 +258,55 @@ button:hover {
 /* line 12, ../scss/components/_btns.scss */
 .download-btn {
   width: 280px;
+}
+
+/* line 1, ../scss/components/_cards.scss */
+.cards-title {
+  text-align: center;
+  color: #2d3033;
+  font: 700 0.88rem "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1.56rem;
+}
+
+/* line 9, ../scss/components/_cards.scss */
+.cards-description {
+  text-align: center;
+}
+
+/* line 18, ../scss/components/_cards.scss */
+.team-photo {
+  margin-bottom: 1.88rem;
+}
+
+/* line 22, ../scss/components/_cards.scss */
+.team-cards-title {
+  color: #2d3033;
+  font: 400 1.38rem "Raleway", sans-serif;
+  margin-bottom: .6rem;
+}
+
+/* line 28, ../scss/components/_cards.scss */
+.team-position {
+  color: #e84545;
+  font: 400 0.8rem/1.3rem "Raleway", sans-serif;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* line 35, ../scss/components/_cards.scss */
+.team-description, .cards-description {
+  color: #6c7279;
+  font: 400 0.88rem/1.3rem "Raleway", sans-serif;
+  margin-bottom: 1.9rem;
+}
+
+/* line 7, ../scss/components/_projects.scss */
+.projects-container .project-item {
+  padding: 0;
+}
+/* line 11, ../scss/components/_projects.scss */
+.projects-container .project-item .project-card {
+  max-width: 100%;
+  height: auto;
 }

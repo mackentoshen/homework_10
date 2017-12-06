@@ -1,0 +1,16 @@
+.projects-container {
+  //display: flex;
+  //justify-content: center;
+  //flex-wrap: wrap;
+  //overflow: hidden;
+
+  .project-item {
+    //max-width: 25%;
+    padding: 0;
+
+    .project-card {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

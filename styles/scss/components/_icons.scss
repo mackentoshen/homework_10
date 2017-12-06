@@ -25,3 +25,20 @@
     }
   }
 }
+
+.card-icons {
+  @extend .footer-icons;
+  text-align: left;
+
+  .icon-border {
+    border: 2px solid $icon-color;
+
+    &:hover {
+      color: $white;
+    }
+
+    .fa {
+      color: $icon-color;
+    }
+  }
+}

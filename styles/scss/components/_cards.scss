@@ -1,0 +1,39 @@
+.cards-title {
+  text-align: center;
+  color: $card-title-text;
+  font: 700 .88rem $Raleway;
+  text-transform: uppercase;
+  margin-bottom: 1.56rem;
+}
+
+.cards-description {
+  @extend .team-description;
+  text-align: center;
+}
+
+
+
+//--------------------------//
+
+.team-photo {
+  margin-bottom: 1.88rem;
+}
+
+.team-cards-title {
+  color: $card-title-text;
+  font: 400 1.38rem $Raleway;
+  margin-bottom: .6rem;
+}
+
+.team-position {
+  color: $btn-coral;
+  font: 400 .8rem/1.3rem $Raleway;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.team-description {
+  color: $card-description-text;
+  font: 400 .88rem/1.3rem $Raleway;
+  margin-bottom: 1.9rem;
+}
