@@ -9,34 +9,34 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    //z-index: 11222;
 
-    &-content {
+    .project-item-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       opacity: 0;
-      transition: .5s;
-      //z-index: 131;
 
-      &:hover {
+      //transition: .5s;
+    }
+
+    &:hover {
+      .project-item-content {
         opacity: 1!important;
         transition: .5s;
-        //z-index: 99;
-
-        &:hover:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: rgba(232, 69, 69, 0.9);
-          opacity: 0.4;
-          //z-index: 1;
-        }
+        position: relative;
+        z-index: 10;
       }
 
+      &:hover:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(232, 69, 69, 0.9);
+        opacity: 0.8;
+      }
 
 
       .project-name {
@@ -51,10 +51,5 @@
         font: 400 .88rem $Raleway;
       }
     }
-
-    //.project-card {
-    //  width: 100%;
-    //  height: 100%;
-    //}
   }
 }

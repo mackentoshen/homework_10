@@ -1,4 +1,4 @@
-/* line 5, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -413,21 +413,22 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 14, ../scss/components/_projects.scss */
-.projects-container .project-item-content {
+/* line 13, ../scss/components/_projects.scss */
+.projects-container .project-item .project-item-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  transition: .5s;
 }
-/* line 22, ../scss/components/_projects.scss */
-.projects-container .project-item-content:hover {
+/* line 23, ../scss/components/_projects.scss */
+.projects-container .project-item:hover .project-item-content {
   opacity: 1 !important;
   transition: .5s;
+  position: relative;
+  z-index: 10;
 }
-/* line 27, ../scss/components/_projects.scss */
-.projects-container .project-item-content:hover:hover:before {
+/* line 30, ../scss/components/_projects.scss */
+.projects-container .project-item:hover:hover:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -435,17 +436,17 @@ button:hover {
   top: 0;
   left: 0;
   background-color: rgba(232, 69, 69, 0.9);
-  opacity: 0.4;
+  opacity: 0.8;
 }
 /* line 42, ../scss/components/_projects.scss */
-.projects-container .project-item-content .project-name {
+.projects-container .project-item:hover .project-name {
   margin-bottom: .8rem;
   color: #fff;
   font: 700 0.88rem "Raleway", sans-serif;
   text-transform: uppercase;
 }
 /* line 49, ../scss/components/_projects.scss */
-.projects-container .project-item-content .project-description {
+.projects-container .project-item:hover .project-description {
   color: #fff;
   font: 400 0.88rem "Raleway", sans-serif;
 }
@@ -464,7 +465,7 @@ button:hover {
 .carousel-wrap .carousel-slide-img .carousel-photo {
   width: 100%;
   height: auto;
-  max-height: 347px;
+  max-height: 46%;
 }
 /* line 21, ../scss/components/_carousel.scss */
 .carousel-wrap .carousel-slide-content {
