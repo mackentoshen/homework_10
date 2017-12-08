@@ -508,9 +508,3 @@ button:hover {
 .owl-dots .owl-dot span {
   background-color: #fff;
 }
-
-/* line 64, ../scss/components/_carousel.scss */
-.container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
