@@ -1,4 +1,4 @@
-/* line 5, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -98,13 +98,41 @@ button:hover {
 /* line 1, ../scss/layouts/_header.scss */
 .page-header {
   padding: 2.5rem 0 2.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
 }
-/* line 4, ../scss/layouts/_header.scss */
+/* line 7, ../scss/layouts/_header.scss */
 .page-header .nav-link {
   color: #fff !important;
   opacity: 0.75;
   font: 700 0.8rem "Raleway", sans-serif;
   text-transform: uppercase;
+}
+
+/* line 15, ../scss/layouts/_header.scss */
+.navbar {
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* line 20, ../scss/layouts/_header.scss */
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+/* line 24, ../scss/layouts/_header.scss */
+.nav-item {
+  margin-left: 60px;
+}
+/* line 27, ../scss/layouts/_header.scss */
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+/* line 32, ../scss/layouts/_header.scss */
+.nav-link:hover {
+  color: #fff !important;
+  opacity: 1;
+  transition: .3s;
 }
 
 /* line 1, ../scss/layouts/sections/_welcome-section.scss */
@@ -188,7 +216,7 @@ button:hover {
 }
 /* line 17, ../scss/components/_icons.scss */
 .footer-icons .icon-border:hover, .card-icons .icon-border:hover {
-  border: #e84545;
+  border-color: #e84545;
   background-color: #e84545;
 }
 /* line 22, ../scss/components/_icons.scss */
@@ -209,7 +237,11 @@ button:hover {
 .card-icons .icon-border:hover {
   color: #fff;
 }
-/* line 40, ../scss/components/_icons.scss */
+/* line 39, ../scss/components/_icons.scss */
+.card-icons .icon-border:hover .fa {
+  color: #fff;
+}
+/* line 44, ../scss/components/_icons.scss */
 .card-icons .icon-border .fa {
   color: #c6cacc;
 }
@@ -266,13 +298,67 @@ button:hover {
   text-transform: uppercase;
   color: #fff;
 }
-
 /* line 12, ../scss/components/_btns.scss */
+.welcome-btn:hover, .download-btn:hover {
+  background-color: red;
+  transition: .3s;
+}
+
+/* line 18, ../scss/components/_btns.scss */
 .download-btn {
   width: 280px;
 }
 
 /* line 1, ../scss/components/_cards.scss */
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* line 6, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list {
+  position: relative;
+  max-width: 300px;
+  padding: 90px 0 10px;
+}
+/* line 11, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:before {
+  content: '';
+  width: 80px;
+  height: 60px;
+  display: block;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-size: contain;
+}
+/* line 24, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(1):before {
+  background: url("../../images/card1.png") center center no-repeat;
+}
+/* line 30, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(2):before {
+  background: url("../../images/card2.png") center center no-repeat;
+}
+/* line 36, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(3):before {
+  background: url("../../images/card3.png") center center no-repeat;
+}
+/* line 42, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(4):before {
+  background: url("../../images/card4.png") center center no-repeat;
+}
+/* line 48, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(5):before {
+  background: url("../../images/card5.png") center center no-repeat;
+}
+/* line 54, ../scss/components/_cards.scss */
+.cards-wrapper .cards-list:nth-child(6):before {
+  background: url("../../images/card6.png") center center no-repeat;
+}
+
+/* line 62, ../scss/components/_cards.scss */
 .cards-title {
   text-align: center;
   color: #2d3033;
@@ -281,24 +367,27 @@ button:hover {
   margin-bottom: 1.56rem;
 }
 
-/* line 9, ../scss/components/_cards.scss */
+/* line 70, ../scss/components/_cards.scss */
 .cards-description {
   text-align: center;
 }
 
-/* line 18, ../scss/components/_cards.scss */
+/* line 80, ../scss/components/_cards.scss */
 .team-photo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
   margin-bottom: 1.88rem;
 }
 
-/* line 22, ../scss/components/_cards.scss */
+/* line 87, ../scss/components/_cards.scss */
 .team-cards-title {
   color: #2d3033;
   font: 400 1.38rem "Raleway", sans-serif;
   margin-bottom: .6rem;
 }
 
-/* line 28, ../scss/components/_cards.scss */
+/* line 93, ../scss/components/_cards.scss */
 .team-position {
   color: #e84545;
   font: 400 0.8rem/1.3rem "Raleway", sans-serif;
@@ -306,7 +395,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-/* line 35, ../scss/components/_cards.scss */
+/* line 100, ../scss/components/_cards.scss */
 .team-description, .cards-description {
   color: #6c7279;
   font: 400 0.88rem/1.3rem "Raleway", sans-serif;
@@ -315,39 +404,113 @@ button:hover {
 
 /* line 3, ../scss/components/_projects.scss */
 .projects-container .project-item {
-  height: 350px;
+  position: relative;
+  min-height: 300px;
+  height: auto;
   width: 25%;
-  padding: 0;
+  padding: 130px 0 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-/* line 8, ../scss/components/_projects.scss */
-.projects-container .project-item .project-card {
+/* line 14, ../scss/components/_projects.scss */
+.projects-container .project-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: .5s;
+}
+/* line 22, ../scss/components/_projects.scss */
+.projects-container .project-item-content:hover {
+  opacity: 1 !important;
+  transition: .5s;
+}
+/* line 27, ../scss/components/_projects.scss */
+.projects-container .project-item-content:hover:hover:before {
+  content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(232, 69, 69, 0.9);
+  opacity: 0.4;
+}
+/* line 42, ../scss/components/_projects.scss */
+.projects-container .project-item-content .project-name {
+  margin-bottom: .8rem;
+  color: #fff;
+  font: 700 0.88rem "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+/* line 49, ../scss/components/_projects.scss */
+.projects-container .project-item-content .project-description {
+  color: #fff;
+  font: 400 0.88rem "Raleway", sans-serif;
 }
 
-/* line 1, ../scss/components/_carousel.scss */
-.carousel-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-/* line 6, ../scss/components/_carousel.scss */
+/* line 3, ../scss/components/_carousel.scss */
 .carousel-wrap .col {
   padding: 0;
   margin: 0;
 }
-/* line 11, ../scss/components/_carousel.scss */
+/* line 8, ../scss/components/_carousel.scss */
 .carousel-wrap .carousel-slide-img {
   width: 50%;
   padding: 0;
 }
-/* line 16, ../scss/components/_carousel.scss */
+/* line 12, ../scss/components/_carousel.scss */
 .carousel-wrap .carousel-slide-img .carousel-photo {
   width: 100%;
   height: auto;
+  max-height: 347px;
 }
-/* line 24, ../scss/components/_carousel.scss */
+/* line 21, ../scss/components/_carousel.scss */
 .carousel-wrap .carousel-slide-content {
   width: 50%;
-  background-color: silver;
+  padding: 4rem 9.5rem 4.4rem 4.5rem;
+  background-color: #53354a;
+}
+/* line 26, ../scss/components/_carousel.scss */
+.carousel-wrap .carousel-slide-content .carousel-article {
+  color: #fff;
+  font: 2.25rem/2.6rem "Cardo", serif;
+  font-style: italic;
+  margin-bottom: 1.8rem;
+}
+/* line 33, ../scss/components/_carousel.scss */
+.carousel-wrap .carousel-slide-content .carousel-author {
+  color: #fff;
+  font: 700 0.8rem/1.3rem "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 41, ../scss/components/_carousel.scss */
+.owl-nav {
+  display: none;
+}
+
+/* line 45, ../scss/components/_carousel.scss */
+.item {
+  display: flex;
+}
+
+/* line 49, ../scss/components/_carousel.scss */
+.owl-dots {
+  position: absolute;
+  top: auto;
+  bottom: 5%;
+  left: auto;
+  right: 25%;
+}
+/* line 57, ../scss/components/_carousel.scss */
+.owl-dots .owl-dot span {
+  background-color: #fff;
+}
+
+/* line 64, ../scss/components/_carousel.scss */
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

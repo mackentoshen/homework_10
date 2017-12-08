@@ -15,7 +15,7 @@
     }
 
     &:hover {
-      border: $btn-coral;
+      border-color: $btn-coral;
       background-color: $btn-coral;
     }
 
@@ -35,6 +35,10 @@
 
     &:hover {
       color: $white;
+
+      .fa {
+        color: $white;
+      }
     }
 
     .fa {
